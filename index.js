@@ -46,7 +46,7 @@ function scrapData(html) {
     let title = descCardNode[i].children[0].children[0].data;
 
     let price = priceCardNode[i].children[2].children[0].data;
-    finalData = [...finalData, { image, title, price, desc }];
+    finalData = [...finalData, { image, title, price, desc, id: i }];
   }
 
   fs.appendFile(
